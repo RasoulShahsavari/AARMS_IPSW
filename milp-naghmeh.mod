@@ -18,7 +18,7 @@ minimize obj: sum{(i,j) in E}(e[i,j,1]+e[i,j,2])+ sum{j in N}(q[j,1]+q[j,2]);
 s.t. c1{k in M, (i,j) in E}:e[i,j,k] >= x1[i,k]+sum{a in D} (c[i,j,a]*w1[a,k]*l[i,j])-x1[j,k];
 s.t. c2{k in M, (i,j) in E}:e[i,j,k] >= -x1[i,k]-sum{a in D}(c[i,j,a]*w1[a,k]*l[i,j])+x1[j,k];
 s.t. c3{k in M, (i,j) in E}: x1[i,k]-v[i,k]<= q[j,k];
-s.t. c4{k in M, i in N}: x1[i,k]-v[i,k]<= -q[i,k];
+s.t. c4{k in M, i in N}: -x1[i,k] +v[i,k]<= q[i,k];
 s.t. c5{(i,j) in E}: sum{k in D }c[i,j,k]=1;
 solve;
 display x1,e,q,c;
