@@ -21,7 +21,9 @@ s.t. c3{k in M, (i,j) in E}: x1[i,k]-v[i,k]<= q[j,k];
 s.t. c4{k in M, i in N}: -x1[i,k] +v[i,k]<= q[i,k];
 s.t. c5{(i,j) in E}: sum{k in D }c[i,j,k]=1;
 solve;
-display x1,e,q,c;
+
+printf "Vertex locations:\n";
+printf{i in N}  "%d\t%g\t%g\n", i, x1[i,1], x1[i,2];
 
 data;
 
