@@ -24,6 +24,7 @@ solve;
 display x1,e,q,c;
 
 printf "Vertex location: \n";
+printf "index\tx\ty\n";
 printf{i in N} "%d\t%g\t%g\n", i, x1[i,1], x1[i,2];
 
 data;
