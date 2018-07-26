@@ -1,0 +1,6 @@
+reset;
+model map_1_4w_model.mod;
+data data.dat;
+option solver cplex;
+solve;
+display x1,e,q,c;
