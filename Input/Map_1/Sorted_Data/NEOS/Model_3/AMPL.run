@@ -1,0 +1,6 @@
+reset;
+model model_3.mod;
+data m3_data.dat;
+option solver cplex;
+solve;
+display x1,e,q,c;
