@@ -1,0 +1,4 @@
+solve;
+printf "Vertex location: \n";
+printf{i in N} "%d\t%g\t%g\n", i, x[i,1], x[i,2];
+display x;
